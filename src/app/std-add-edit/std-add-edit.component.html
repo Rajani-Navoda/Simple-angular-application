@@ -1,0 +1,42 @@
+<div mat-dialog-title>
+    <h1>STUDENT FORM</h1>
+</div>
+<form [formGroup]="stdForm" (ngSubmit)="onFormSubmit()">
+<div mat-dialog-content class="content">
+    <div>
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Name</mat-label>
+                <input matInput type="text" placeholder="Ex: Rajani Navoda" formControlName="name">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Age</mat-label>
+                <input matInput type="number" placeholder="Ex: 34" formControlName="age">
+            </mat-form-field>
+        </div>
+
+     
+       <div class="row">
+        <mat-form-field appearance="outline">
+            <mat-label>Address</mat-label>
+            <input matInput type="text" placeholder="22, Main street, Colombo" formControlName="address">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Contact number</mat-label>
+            <input matInput type="text" placeholder="+94773383286" formControlName="contactNo">
+        </mat-form-field>
+       </div>
+
+    </div>
+</div>
+
+    <div mat-dialog-actions class="action">
+        <button mat-raised-button type="button" [mat-dialog-close]="false">Close</button>
+        <button mat-raised-button color="primary" type="submit">{{data ? 'Update' : 'save'}}</button>
+    </div>
+
+</form>
+
+
